@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<div id="navlist">
+    <ul>
+        <li class='link'>
+        <a href='/p/{{ current.parent }}'>
+                <img src='/static/img/folder.png'>
+                <span class="parent">[Parent Directory]</span>
+            </a>
+        </li>
+
+        {% for dir in dirs %}
+            <li class='link'>
+                <a href='/p/{{dir.path}}'>
+                    <img src='/static/img/folder.png'>
+                    <span class="folder">{{dir}}</span>
+                </a>
+            </li>
+        {% endfor %}
+
+        {% for file in files %}
+            <li class='link'>
+                <a href='/p/{{file.path}}' class="file">
+                    <img src='/static/img/file.png'>
+                    <span class="file">{{file}}</span>
+                    <span class="last_view_date"></span>
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
