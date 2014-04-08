@@ -1,6 +1,6 @@
 # clonathan
 
-FIXME
+Pet project to try some clojure/ring/compojure.
 
 ## Prerequisites
 
@@ -16,4 +16,4 @@ To start a web server for the application, run:
 
 ## License
 
-Copyright © 2014 FIXME
+Licensed under BSD license
